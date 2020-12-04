@@ -1,6 +1,6 @@
-#tried to run container in detached mode using "docker run -d infracloudio/csvserver". got exit status(1)
-# ran the container in non-detached mode got the error"missing file /csvserver/inputdata"
-# rectified using following docker file commands on "Dockerfile"
+- tried to run container in detached mode using "docker run -d infracloudio/csvserver". got exit status(1)
+- ran the container in non-detached mode got the error"missing file /csvserver/inputdata"
+- rectified using following docker file commands on "Dockerfile"
 
 0 ,27914 inputFile
 1 ,20554 inputFile
