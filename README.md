@@ -1,0 +1,13 @@
+- downloaded the infracloudio/csvserver:latest image and tried running it.
+- got an error which says "no file found /csvserver/inutdata"
+- wrote a bash script gencsv.sh which creates data of the format "index, rand" and saves it in a file named "inputFile".
+- created a Dockerfile which adds the gencsv.sh into the image and runs it so that it creates "/csvserver/inputdata".
+- tried running Dockerfile created image(solution_csvserver) and it ran succesfully.
+- added an environment variable "CSVSERVER_BORDER=Orange".
+- created a docker-compose file "docker-compose.yaml" which does the above process.
+- ran the container from the "prom/prometheus:v2.22.0" image.
+- checked the metric status on "locahost:9090" on which prometheus container is running.
+- created prometheus.yaml file and added csvserver endpoint (localhost:9393) and attached it as a volume argument to the docker run command of prometheus container.
+- verifed meric status by running a query and by creating a graph from the expression copied from localhost:9393/metrics url.
+- added the prometheus configuration in "docker-compose.yaml"
+- ran it again for the confirmation.
